@@ -1,0 +1,121 @@
+:root {
+    /* Main Theme Colors */
+    --primary-color: #55789C;    /* Deep Blue for main elements (buttons, links) */
+    --accent-color: #2ecc71;     /* Green for success messages or highlights */
+    --error-color: #e74c3c;      /* Red for errors */
+
+    /* Background and Neutral Colors */
+    --neutral-light: #F7F8FB;    /* Light Grayish-White for background */
+    --neutral-white: #ffffff;    /* Pure White for card backgrounds and inputs */
+    --neutral-gray: #ccc;        /* Light Gray for borders */
+    --neutral-border: #e0e0e0;   /* Softer Gray for subtle border contrast */
+    --text-dark: #333333;        /* Dark Gray for primary text */
+    --text-secondary: #777777;   /* Medium Gray for secondary text or placeholders */
+    
+    /* Hover and Focus Colors */
+    --hover-blue: #416582;       /* Darker shade of main color for hover effects */
+    --hover-gray: #b0b0b0;       /* Slightly darker gray for input hover or focus */
+
+    /* QR Code Colors */
+    --qr-background: #ffffff;    /* White background for QR codes */
+    --qr-foreground: #000000;    /* Black for QR code */
+
+    /* Dark Mode Colors */
+    --dark-bg: #2a2a2a;          /* Darker Gray for background in dark mode */
+    --dark-border: #444444;      /* Dark Gray for borders in dark mode */
+    --dark-card-bg: #333333;     /* Dark background for cards and inputs */
+    --dark-text-light: #f4f4f4;  /* Light Gray for text in dark mode */
+    
+    /* Dark Mode Hover Colors */
+    --dark-hover-blue: #455a64;  /* Darker shade of blue for hover in dark mode */
+    --dark-hover-gray: #888888;  /* Lighter gray for input hover or focus in dark mode */
+}
+
+
+/* Start NavBar Component */
+nav
+{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+nav .logo h2
+{
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+}
+nav .auth_btns
+{
+    display: flex;
+    gap: 10px;
+}
+nav .auth_btns button
+{
+    transition: 0.25s;
+    cursor: pointer;
+}
+nav .auth_btns button:first-of-type
+{
+    color: var(--primary-color);
+    background-color: transparent;
+    border: solid 2px var(--primary-color);
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+nav .auth_btns button:last-of-type
+{
+    color: var(--neutral-white);
+    background-color: var(--primary-color);
+    border: solid 2px var(--primary-color);
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+nav .auth_btns button:hover
+{
+    color: var(--neutral-white);
+    background-color: var(--hover-blue);
+    border: solid 2px var(--hover-blue);
+}
+.mob_menu
+{
+    display: none;
+}
+.mob_menu span
+{
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+/* End NavBar Component */
+
+
+
+
+
+/* Start Media Query */
+/* Extra Small */
+@media (max-width:767px)
+{
+    
+}
+/* Small */
+@media (min-width:768px) and (max-width:991px)
+{
+
+}
+/* Medium */
+@media (min-width:992px) and (max-width:1199px)
+{
+
+}
+/* Large */
+@media (min-width:1200px)
+{
+
+}
+/* End Media Query */
