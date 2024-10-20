@@ -33,7 +33,12 @@
 
 
 /* Start NavBar Component */
-nav
+.navBar
+{
+    height: 60px;
+    position: relative;
+}
+.navBar_container
 {
     height: 60px;
     display: flex;
@@ -42,24 +47,24 @@ nav
     padding: 0 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
-nav .logo h2
+.navBar_container .logo h2
 {
     color: var(--primary-color);
     font-size: 24px;
     font-weight: 700;
     cursor: pointer;
 }
-nav .auth_btns
+.navBar_container .auth_btns
 {
     display: flex;
     gap: 10px;
 }
-nav .auth_btns button
+.navBar button
 {
     transition: 0.25s;
     cursor: pointer;
 }
-nav .auth_btns button:first-of-type
+.navBar button:first-of-type
 {
     color: var(--primary-color);
     background-color: transparent;
@@ -67,7 +72,7 @@ nav .auth_btns button:first-of-type
     border-radius: 4px;
     padding: 8px 16px;
 }
-nav .auth_btns button:last-of-type
+.navBar button:last-of-type
 {
     color: var(--neutral-white);
     background-color: var(--primary-color);
@@ -75,21 +80,52 @@ nav .auth_btns button:last-of-type
     border-radius: 4px;
     padding: 8px 16px;
 }
-nav .auth_btns button:hover
+.navBar button:hover
 {
     color: var(--neutral-white);
     background-color: var(--hover-blue);
     border: solid 2px var(--hover-blue);
 }
-.mob_menu
+.mob_menu_btn
 {
     display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
 }
-.mob_menu span
+.mob_menu_btn span
 {
     width: 25px;
     height: 3px;
     background-color: var(--primary-color);
+    transition: 0.3s;
+}
+.mob_menu_btn.menu_open span:nth-child(1) 
+{
+    transform-origin: center;
+    transform: translateY(7px) rotate(-45deg);
+}
+.mob_menu_btn.menu_open span:nth-child(2){
+    opacity: 0;
+}
+.mob_menu_btn.menu_open span:nth-child(3)
+{
+    transform-origin: center;
+    transform: translateY(-7px) rotate(45deg);
+}
+.mob_menu_content
+{
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: absolute;
+    background-color: var(--neutral-white);
+    padding: 10px;
+}
+.mob_auth_btns
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 /* End NavBar Component */
 
@@ -101,7 +137,14 @@ nav .auth_btns button:hover
 /* Extra Small */
 @media (max-width:767px)
 {
-    
+    .navBar .auth_btns
+    {
+        display: none;
+    }
+    .mob_menu_btn
+    {
+        display: flex;
+    }
 }
 /* Small */
 @media (min-width:768px) and (max-width:991px)
